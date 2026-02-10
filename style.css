@@ -1,0 +1,92 @@
+/* HEADER */
+
+.site-header {
+    background: var(--light);
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* NAVBAR */
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.logo img {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+}
+
+.company-name {
+    font-weight: 600;
+    font-size: 30px;
+    margin-left: 0px;
+}
+
+
+/* NAV MENU */
+
+.nav-wrapper {
+    margin-left: auto;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-list a {
+    position: relative;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+
+/* HOVER EFFECT */
+
+.nav-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--primary);
+    transition: 0.3s ease;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background: rgb(6, 81, 56);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.btn-wa {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background: rgb(17, 186, 17);
+    color: white;
+    border-radius: 5px;
+}
+
+main section {
+    background: #f8f6f6;
+}
+
+.about-section {
+    background: #f5f6f5;
+}

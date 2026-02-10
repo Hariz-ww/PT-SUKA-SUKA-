@@ -1,0 +1,479 @@
+                    /* RESET */
+                    
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    /* VARIABLE WARNA */
+                    
+                     :root {
+                        --primary: #b11212;
+                        --secondary: #1e1e1e;
+                        --bg-soft: #f4f4f4;
+                    }
+                    /* BODY */
+                    
+                    body {
+                        font-family: Arial, Helvetica, sans-serif;
+                        line-height: 1.6;
+                        color: var(--dark);
+                    }
+                    /* CONTAINER */
+                    
+                    .container {
+                        width: 90%;
+                        max-width: 1200px;
+                        margin: auto;
+                    }
+                    /* LINK */
+                    
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                    /* =====================
+   GLOBAL CSS MOBILE RESPONSIVE UNIVERSAL
+===================== */
+                    /* =====================
+   MOBILE FIX LAMA (dipertahankan)
+===================== */
+                    
+                    @media (max-width: 768px) {
+                        body {
+                            font-size: 14px;
+                        }
+                        .container {
+                            width: 100%;
+                            padding: 0 16px;
+                        }
+                        /* NAVBAR dasar */
+                        nav {
+                            padding: 12px 16px;
+                        }
+                        nav ul {
+                            gap: 12px;
+                            font-size: 14px;
+                        }
+                        /* HERO / SLIDER */
+                        .hero {
+                            padding: 40px 0;
+                        }
+                        .slider {
+                            max-width: 100%;
+                            border-radius: 12px;
+                        }
+                        .slide img {
+                            height: 240px;
+                        }
+                        .overlay h2 {
+                            font-size: 20px;
+                        }
+                        .overlay p {
+                            font-size: 13px;
+                        }
+                        /* SERVICES */
+                        .services-grid {
+                            grid-template-columns: 1fr;
+                            gap: 16px;
+                        }
+                        .service-card {
+                            padding: 20px;
+                        }
+                        /* ABOUT */
+                        .about-section {
+                            padding: 40px 16px;
+                        }
+                        .about-section h2 {
+                            font-size: 22px;
+                        }
+                        .about-section p {
+                            font-size: 14px;
+                            line-height: 1.6;
+                        }
+                        /* FOOTER */
+                        footer {
+                            padding: 30px 16px;
+                            text-align: center;
+                        }
+                    }
+                    /* =====================
+   MOBILE RESPONSIVE UNIVERSAL + HAMBURGER MENU
+===================== */
+                    
+                    @media (max-width: 768px) {
+                        /* NAVBAR RESPONSIVE */
+                        nav .nav-container {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            position: relative;
+                            z-index: 100;
+                        }
+                        nav .logo-section {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                        }
+                        nav .logo img {
+                            width: 70px;
+                            /* responsive logo */
+                            height: auto;
+                        }
+                        nav .company-name {
+                            font-size: clamp(16px, 4vw, 20px);
+                            /* responsive font */
+                            line-height: 1.2;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        /* HAMBURGER MENU */
+                        .hamburger {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+                            cursor: pointer;
+                        }
+                        .hamburger span {
+                            display: block;
+                            width: 25px;
+                            height: 3px;
+                            background-color: #000;
+                            border-radius: 2px;
+                            transition: all 0.3s ease;
+                        }
+                        .hamburger.open span:nth-child(1) {
+                            transform: rotate(45deg) translate(5px, 5px);
+                        }
+                        .hamburger.open span:nth-child(2) {
+                            opacity: 0;
+                        }
+                        .hamburger.open span:nth-child(3) {
+                            transform: rotate(-45deg) translate(5px, -5px);
+                        }
+                        /* NAV LINKS */
+                        .nav-links {
+                            display: none;
+                            flex-direction: column;
+                            width: 100%;
+                            background-color: #fff;
+                            position: absolute;
+                            top: 60px;
+                            left: 0;
+                            padding: 10px 0;
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        }
+                        .nav-links li {
+                            text-align: center;
+                            margin: 8px 0;
+                        }
+                        .nav-links li a {
+                            font-size: 16px;
+                            display: block;
+                            padding: 8px 0;
+                        }
+                        .nav-links.active {
+                            display: flex;
+                        }
+                        /* HERO SECTION RESPONSIVE */
+                        .hero {
+                            height: auto;
+                            padding: 50px 20px;
+                            text-align: center;
+                        }
+                        .hero img,
+                        .slide img {
+                            width: 100%;
+                            height: auto;
+                            object-fit: cover;
+                            max-height: 400px;
+                        }
+                        .hero h1,
+                        .overlay h2 {
+                            font-size: clamp(22px, 6vw, 28px);
+                            line-height: 1.3;
+                        }
+                        .hero p,
+                        .overlay p {
+                            font-size: clamp(14px, 4vw, 18px);
+                            margin-top: 10px;
+                        }
+                        .hero .btn {
+                            font-size: 14px;
+                            padding: 10px 20px;
+                            margin-top: 15px;
+                        }
+                        /* SECTION LAIN / MITRA */
+                        .trusted-partners,
+                        .section {
+                            padding: 40px 15px;
+                            text-align: center;
+                        }
+                        .trusted-partners img,
+                        .section img {
+                            max-width: 80px;
+                            margin: 8px;
+                        }
+                    }
+                    /* =====================
+   MOBILE SANGAT KECIL (<480px)
+===================== */
+                    
+                    @media (max-width: 480px) {
+                        nav .logo img {
+                            width: 60px;
+                        }
+                        nav .company-name {
+                            font-size: 16px;
+                        }
+                        .hero h1,
+                        .overlay h2 {
+                            font-size: 22px;
+                        }
+                        .hero p,
+                        .overlay p {
+                            font-size: 14px;
+                        }
+                        .hero img,
+                        .slide img {
+                            max-height: 300px;
+                        }
+                        .hero .btn {
+                            padding: 8px 16px;
+                            font-size: 13px;
+                        }
+                    }
+                    /* =====================
+   NAVBAR UNIVERSAL
+===================== */
+                    
+                    .navbar-flex {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    /* LOGO */
+                    
+                    .logo-section {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                    
+                    .logo img {
+                        height: 48px;
+                    }
+                    
+                    .company-name {
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+                    /* NAV LIST DESKTOP */
+                    
+                    .nav-list {
+                        display: flex;
+                        gap: 24px;
+                        list-style: none;
+                    }
+                    /* =====================
+   HAMBURGER
+===================== */
+                    
+                    .hamburger {
+                        display: none;
+                        flex-direction: column;
+                        gap: 5px;
+                        cursor: pointer;
+                    }
+                    
+                    .hamburger span {
+                        width: 26px;
+                        height: 3px;
+                        background: #000;
+                        border-radius: 2px;
+                    }
+                    /* =====================
+   MOBILE
+===================== */
+                    
+                    @media (max-width: 768px) {
+                        .company-name {
+                            font-size: 16px;
+                        }
+                        .logo img {
+                            height: 36px;
+                        }
+                        /* SHOW HAMBURGER */
+                        .hamburger {
+                            display: flex;
+                        }
+                    }
+                    /* NAV LIST HIDE */
+                    
+                    @media (max-width: 768px) {
+                        .company-name {
+                            font-size: 16px;
+                        }
+                        .logo img {
+                            height: 36px;
+                        }
+                        /* SHOW HAMBURGER */
+                        .hamburger {
+                            display: flex;
+                        }
+                        /* NAV LIST HIDE (FIXED, BUKAN ABSOLUTE) */
+                        .nav-list {
+                            position: fixed;
+                            top: 64px;
+                            left: 0;
+                            width: 100%;
+                            background: #fff;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 20px;
+                            padding: 24px 0;
+                            display: none;
+                            z-index: 9998;
+                        }
+                        .nav-list.active {
+                            display: flex;
+                        }
+                    }
+                    /* HEADER HARUS DI LUAR MEDIA */
+                    
+                    .site-header {
+                        position: sticky;
+                        top: 0;
+                        z-index: 9999;
+                        background: #fff;
+                    }
+                    /* pastikan nav juga solid */
+                    
+                    .site-header .navbar {
+                        background-color: #ffffff;
+                    }
+                    
+                    .hero,
+                    .slider {
+                        position: relative;
+                        z-index: 1;
+                    }
+                    /* =====================
+   FORCE MOBILE NAVBAR (OVERRIDE STYLE.CSS & PAGE.CSS)
+===================== */
+                    
+                    @media (max-width: 768px) {
+                        /* SEMBUNYIKAN NAVBAR DESKTOP */
+                        .nav-list {
+                            display: none !important;
+                            position: fixed;
+                            top: 64px;
+                            left: 0;
+                            width: 100%;
+                            background: #fff;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 20px;
+                            padding: 24px 0;
+                            z-index: 9998;
+                            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+                        }
+                        /* MUNCUL SAAT HAMBURGER DIKLIK */
+                        .nav-list.active {
+                            display: flex !important;
+                        }
+                        /* HAMBURGER ONLY MOBILE */
+                        .hamburger {
+                            display: flex !important;
+                        }
+                    }
+                    /* =====================
+/* =====================
+   MOBILE FLOATING RIGHT NAV
+===================== */
+                    
+                    @media (max-width: 768px) {
+                        .nav-list {
+                            position: fixed;
+                            top: 70px;
+                            /* JARAK DARI HEADER */
+                            right: -260px;
+                            /* sembunyi */
+                            width: 240px;
+                            /* lebih sempit */
+                            background: #ffffff;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            padding: 20px 20px;
+                            gap: 16px;
+                            border-radius: 12px 0 0 12px;
+                            box-shadow: -8px 8px 24px rgba(0, 0, 0, .18);
+                            transition: right .3s ease;
+                            z-index: 9998;
+                        }
+                        .nav-list.active {
+                            right: 16px;
+                            /* slide masuk */
+                        }
+                        .nav-list li {
+                            width: 100%;
+                        }
+                        .nav-list li a {
+                            display: block;
+                            width: 100%;
+                            padding: 10px 0;
+                            font-size: 15px;
+                        }
+                    }
+                    /* =====================
+   MOBILE RIGHT FLOATING NAV (FORCE RIGHT)
+===================== */
+                    
+                    @media (max-width: 768px) {
+                        .nav-list {
+                            left: auto !important;
+                            /* MATIKAN KIRI */
+                            right: -220px !important;
+                            /* sembunyi kanan */
+                            top: 72px;
+                            width: 100px;
+                            background: #ffffff;
+                            position: fixed;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            padding: 20px;
+                            gap: 16px;
+                            border-radius: 16px 16px 16px 16px;
+                            /* SUDUT MELENGKUNG */
+                            box-shadow: -8px 8px 24px rgba(0, 0, 0, .2);
+                            transition: right .35s ease;
+                            z-index: 9999;
+                        }
+                        .nav-list.active {
+                            right: 16px !important;
+                            /* geser masuk */
+                        }
+                    }
+                    /* =====================
+   NAV BACKDROP BLUR
+===================== */
+                    
+                    @media (max-width: 768px) {
+                        .nav-backdrop {
+                            position: fixed;
+                            inset: 0;
+                            background: rgba(0, 0, 0, .25);
+                            backdrop-filter: blur(6px);
+                            -webkit-backdrop-filter: blur(6px);
+                            opacity: 0;
+                            pointer-events: none;
+                            transition: opacity .3s ease;
+                            z-index: 9997;
+                        }
+                        .nav-backdrop.active {
+                            opacity: 1;
+                            pointer-events: auto;
+                        }
+                    }
